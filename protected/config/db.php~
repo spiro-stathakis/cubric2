@@ -1,0 +1,13 @@
+<?php
+return array(
+        'connectionString' => 'mysql:host=localhost;dbname=le_db_test',
+        'emulatePrepare' => true,
+        'username' => 'le_db_test',
+        'password' => 'le_db_test',
+        'charset' => 'utf8',
+        'enableProfiling'=>true, 
+        // 'schemaCachingDuration'=>3600,
+        );
+
+
+

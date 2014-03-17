@@ -1,0 +1,33 @@
+<div class="sidebar-nav nav-collapse collapse navbar-collapse">
+		<ul class="nav nav-tabs nav-stacked main-menu">
+				<li><a href="index.html"><i class="fa fa-home icon"></i><span class="hidden-sm"> Dashboard</span></a></li>
+				<li><a href="ui.html"><i class="fa fa-eye"></i><span class="hidden-sm"> UI Features</span></a></li>
+				<li><a href="forms.html"><i class="fa fa-edit"></i><span class="hidden-sm"> Forms</span></a></li>
+				<li><a href="charts.html"><i class="fa fa-bar-chart-o"></i><span class="hidden-sm"> Charts</span></a></li>
+				<li>
+					<a class="dropmenu" href="gallery.html#"><i class="fa fa-folder"></i><span class="hidden-sm"> Dropdown</span></a>
+					<ul>
+						<li><a class="submenu" href="submenu.html"><i class="fa fa-file"></i><span class="hidden-sm"> Sub Menu 1</span></a></li>
+						<li><a class="submenu" href="submenu.html"><i class="fa fa-file"></i><span class="hidden-sm"> Sub Menu 2</span></a></li>
+						<li><a class="submenu" href="submenu.html"><i class="fa fa-file"></i><span class="hidden-sm"> Sub Menu 3</span></a></li>
+					</ul>	
+				</li>
+				<li><a href="typography.html"><i class="fa fa-font"></i><span class="hidden-sm"> Typography</span></a></li>
+				<li><a href="gallery.html"><i class="fa fa-picture-o"></i><span class="hidden-sm"> Gallery</span></a></li>
+				<li><a href="table.html"><i class="fa fa-align-justify"></i><span class="hidden-sm"> Tables</span></a></li>
+				<li><a href="calendar.html"><i class="fa fa-calendar"></i><span class="hidden-sm"> Calendar</span></a></li>
+				<li><a href="grid.html"><i class="fa fa-th"></i><span class="hidden-sm"> Grid</span></a></li>
+				<li><a href="file-manager.html"><i class="fa fa-folder-open"></i><span class="hidden-sm"> File Manager</span></a></li>
+				<li>
+					<a class="dropmenu" href="gallery.html#"><i class="fa fa-star"></i><span class="hidden-sm"> Icons</span></a>
+					<ul>
+						<li><a class="submenu" href="icons-font-awesome.html"><i class="fa fa-star"></i><span class="hidden-sm"> Font Awesome</span></a></li>
+						<li><a class="submenu" href="icons-halflings.html"><i class="fa fa-star"></i><span class="hidden-sm"> Halflings</span></a></li>
+						<li><a class="submenu" href="icons-glyphicons-pro.html"><i class="fa fa-star"></i><span class="hidden-sm"> Glyphicons PRO</span></a></li>
+						<li><a class="submenu" href="icons-filetypes.html"><i class="fa fa-star"></i><span class="hidden-sm"> Filetypes</span></a></li>
+						<li><a class="submenu" href="icons-social.html"><i class="fa fa-star"></i><span class="hidden-sm"> Social</span></a></li>
+					</ul>	
+				</li>
+				<li><a href="login.html"><i class="fa fa-lock"></i><span class="hidden-sm"> Login Page</span></a></li>
+		</ul>
+	</div><!--/.well -->

@@ -1,0 +1,23 @@
+<?php 
+return array(		
+				''=>'vocaleyes/default/home',
+				'/<c:\w+>/<a:\w+>/<p:\w+>/(:any)'=>'vocaleyes/<c>/<a>/<p>/$1',
+				'/<c:\w+>/login'=>'site/login',
+				'/<c:\w+>/redirect'=>'site/redirect',
+				'/logout'=>'vocaleyes/default/logout',
+				'/dashboard'=>'vocaleyes/dashboard/home',
+				'/support'=>'vocaleyes/support/home',
+				'/dashboard/<a:\w+>'=>'vocaleyes/dashboard/<a>',
+				'/dashboard/<a:\w+>/grp/<id:\d+>'=>'vocaleyes/dashboard/<a>/grp/<id>',
+				'/tlif'=>'http://tlif.vocaleyes.org', 
+				'/blog'=>'http://blog.vocaleyes.org', 
+				'/info'=>'http://localeyes.org/info',
+				'http://www.localeyes.org'=>'http://info.localeyes.org', 
+				'/admin'=>'/admin/default/index',
+				'/gii'=>'/gii',
+				'/terms'=>'/site/terms',
+				'/<alias>'=>'vocaleyes/default/alias/name/<alias>',
+				 
+				//'http://<h:\w+>.vocaleyes.org/widget/<c:\w+>/<a:\w+>/<id:\w+>'=>'vocaleyes/widget',
+			 	 
+			);
