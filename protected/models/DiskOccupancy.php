@@ -39,7 +39,8 @@ class DiskOccupancy extends XActiveRecord
 		// will receive user inputs.
 		return array(
 			array('user_id, filespace_id, occupancy, create_time, create_user_id', 'required'),
-			array('user_id, filespace_id, occupancy, modified_flag, status_id, create_time, create_user_id, update_time, update_user_id', 'length', 'max'=>10),
+			array('user_id, filespace_id, modified_flag, status_id, create_time, create_user_id, update_time, update_user_id', 'length', 'max'=>10),
+			array('occupancy', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, user_id, filespace_id, occupancy, modified_flag, status_id, create_time, create_user_id, update_time, update_user_id', 'safe', 'on'=>'search'),

@@ -22,9 +22,11 @@
  * The followings are the available model relations:
  * @property DiskOccupancy[] $diskOccupancies
  * @property RefFilespace[] $refFilespaces
+ * @property RefLogontype[] $refLogontypes
  * @property RefResearchgroup[] $refResearchgroups
  * @property RefStatus $status
  * @property RefStatus[] $refStatuses
+ * @property ResearchGroups[] $researchGroups
  * @property User[] $users
  */
 class RefStatus extends XActiveRecord
@@ -66,9 +68,11 @@ class RefStatus extends XActiveRecord
 		return array(
 			'diskOccupancies' => array(self::HAS_MANY, 'DiskOccupancy', 'status_id'),
 			'refFilespaces' => array(self::HAS_MANY, 'RefFilespace', 'status_id'),
+			'refLogontypes' => array(self::HAS_MANY, 'RefLogontype', 'status_id'),
 			'refResearchgroups' => array(self::HAS_MANY, 'RefResearchgroup', 'status_id'),
 			'status' => array(self::BELONGS_TO, 'RefStatus', 'status_id'),
 			'refStatuses' => array(self::HAS_MANY, 'RefStatus', 'status_id'),
+			'researchGroups' => array(self::HAS_MANY, 'ResearchGroups', 'status_id'),
 			'users' => array(self::HAS_MANY, 'User', 'status_id'),
 		);
 	}

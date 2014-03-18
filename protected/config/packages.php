@@ -36,7 +36,22 @@ return array(
 		 'font-awesome'=>array(
 		 	'baseUrl'=>'/packages/font-awesome',
 		 	'css'=>array('css/font-awesome.min.css'),
+		 ),
+		 'jqplot'=>array(
+		 	'baseUrl'=>'/packages/jqplot', 
+		 	'css'=>array('jquery.jqplot.css'), 
+		 	'js'=>array('jquery.jqplot.js'),
+		 	'depends'=>array('jquery', 'jquery-ui') 
 		 ), 
+		 'jqplot-barchart'=>array(
+		 	 	'baseUrl'=>'/packages/jqplot/plugins', 
+		 	 	'js'=>array('jqplot.categoryAxisRenderer.min.js', 
+		 	 		'jqplot.barRenderer.js',
+		 	 		'jqplot.pointLabels.min.js', 
+		 	 		), 
+		 	 	'depends'=>array('jqplot')
+		 	 ), 
+		 
 		 
 	),
 ); 

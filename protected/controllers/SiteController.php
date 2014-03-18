@@ -35,6 +35,81 @@ class SiteController extends Controller
 		$this->render('index');
 	}
 
+/* *************************************************************** */
+/* *************************************************************** */
+/* *************************************************************** */
+/* *************************************************************** */
+	public function actionDiskUsage()
+	{ 
+		
+		$ticks = "";
+		$home = ""; 
+		$scratch = ""; 
+		$usage = ""; 
+		$cs = Yii::app()->getClientScript();
+		$cs->registerPackage('jqplot-barchart');
+		$arr = DiskOccupancyHelper::getFileSpaceUsage(2);
+		foreach($arr as $row)
+			$homeData[$row['username']] = $row['usage'];
+		
+		$arr = DiskOccupancyHelper::getFileSpaceUsage(3);
+		
+		foreach($arr as $row)
+			$scratchData[$row['username']] = $row['usage'];
+		
+		$arr = DiskOccupancyHelper::getUsers();
+		foreach ($arr as $row)
+			$users[] = $row['username'];
+		 
+		foreach($users as $user)
+		{ 
+			$arr = array();
+			if (array_key_exists( $user  , $homeData ))
+				$arr[] = $homeData[$user]; 
+			else 
+				$arr[] = 0; 
+			if (array_key_exists( $user  , $scratchData ))
+				$arr[] = $scratchData[$user]; 
+			else 
+				$arr[] = 0;			
+			$userData[$user] = $arr; 
+			
+		} 	
+		
+		/* 
+		for ($i = 0; $i<25 ; $i++)
+			$ticks .= "'" . $i . "',";
+		$ticks .= "' '"; 
+		*/ 
+		
+		foreach($userData as $name=>$row)
+		{
+			 
+			if  ($row[0] > 400 || $row[1] > 400)
+			{ 
+				  
+				$home .= $row[0] . "," ;
+				$scratch .= $row[1] . "," ;
+				$ticks .= "'". $name . "',"; 
+			} 
+		} 
+		$ticks .= "''"; 
+		 
+		$home .= "0"; 
+		$scratch .= "0"; 
+		$this->render('diskUsage' , array(
+					'home'=>$home,
+					'scratch'=>$scratch,
+					'ticks'=>$ticks, 
+					)); 	
+		 
+		
+	} 
+	
+/* *************************************************************** */
+/* *************************************************************** */
+/* *************************************************************** */
+	
 	/**
 	 * This is the action to handle external exceptions.
 	 */

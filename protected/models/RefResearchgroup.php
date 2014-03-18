@@ -21,6 +21,7 @@
  *
  * The followings are the available model relations:
  * @property RefStatus $status
+ * @property ResearchGroups[] $researchGroups
  */
 class RefResearchgroup extends XActiveRecord
 {
@@ -60,6 +61,7 @@ class RefResearchgroup extends XActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'status' => array(self::BELONGS_TO, 'RefStatus', 'status_id'),
+			'researchGroups' => array(self::HAS_MANY, 'ResearchGroups', 'researchgroup_id'),
 		);
 	}
 

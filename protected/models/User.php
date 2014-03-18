@@ -30,10 +30,14 @@
  *
  * The followings are the available model relations:
  * @property DiskOccupancy[] $diskOccupancies
+ * @property ResearchGroups[] $researchGroups
  * @property RefStatus $status
+ * @property RefLogontype $logonType
  */
 class User extends XActiveRecord
 {
+	
+	
 	/**
 	 * @return string the associated database table name
 	 */
@@ -51,9 +55,10 @@ class User extends XActiveRecord
 		// will receive user inputs.
 		return array(
 			array('uid_number, gid_number, create_time, create_user_id', 'required'),
-			array('gender_id, uid_number, gid_number, title_id, logon_type_id, modified_flag, status_id, create_time, create_user_id, update_time, update_user_id', 'length', 'max'=>10),
+			array('gender_id,  gid_number, title_id, logon_type_id, modified_flag, status_id, create_time, create_user_id, update_time, update_user_id', 'length', 'max'=>10),
 			array('forename, surname, known_as, id_man, email, telephone, username, password', 'length', 'max'=>255),
 			array('hash', 'length', 'max'=>40),
+			array('uid_number', 'numerical', 'integerOnly'=>true),
 			array('lang', 'length', 'max'=>8),
 			array('dob', 'safe'),
 			// The following rule is used by search().
@@ -71,7 +76,9 @@ class User extends XActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'diskOccupancies' => array(self::HAS_MANY, 'DiskOccupancy', 'user_id'),
+			'researchGroups' => array(self::HAS_MANY, 'ResearchGroups', 'user_id'),
 			'status' => array(self::BELONGS_TO, 'RefStatus', 'status_id'),
+			'logonType' => array(self::BELONGS_TO, 'RefLogontype', 'logon_type_id'),
 		);
 	}
 
