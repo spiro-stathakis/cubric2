@@ -10,6 +10,7 @@
 							
 			<!-- start: Header Menu -->
 			<div class="header-nav">
+				 
 				<ul class="nav navbar-nav pull-right">
 					<li class="dropdown hidden-xs">
 						<a class="btn dropdown-toggle" data-toggle="dropdown" href="index.html#">
@@ -22,7 +23,7 @@
 							
 							<li>
 								<a href="index.html#">
-									<i class="fa fa-shopping-cart"></i> <span class="message">2 items sold</span> <span class="time">1 hour</span> 
+									<i class="fa fa-shopping-cart"></i> <span class="message">2 items on order</span> <span class="time">1 hour</span> 
 								</a>
 							</li>
 							<li class="warning">
@@ -37,9 +38,11 @@
 						</ul>
 					</li>
 				</ul> 
-				<ul class="nav navbar-nav pull-right">
+				 
 					
 					<!-- start: Notifications Dropdown -->
+					
+					<ul class="nav navbar-nav pull-right">
 					<li class="dropdown hidden-xs">
 						<a class="btn dropdown-toggle" data-toggle="dropdown" href="index.html#">
 							<i class="fa fa-tasks"></i> <span class="label label-warning hidden-xs">17</span>
@@ -51,7 +54,7 @@
 							<li>
 							<a href="index.html#">
 								<span class="header">
-									<span class="title">iOS Development</span>
+									<span class="title">Get some code done</span>
 									<span class="percent"></span>
 								</span>
 								<div class="taskProgress progressSlim progressYellow">80</div> 
@@ -60,7 +63,7 @@
 							<li>
 							<a href="index.html#">
 									<span class="header">
-										<span class="title">Android Development</span>
+										<span class="title">Do your research</span>
 										<span class="percent"></span>
 									</span>
 							<div class="taskProgress progressSlim progressYellow">47</div> 
@@ -71,7 +74,8 @@
 							</li>	
 						</ul>
 					</li>
-				</ul> 
+				</ul>
+					 
 					<!-- end: Notifications Dropdown -->
 					<!-- start: Message Dropdown -->
 				<ul class="nav navbar-nav pull-right">
